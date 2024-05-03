@@ -39,9 +39,10 @@
   border-radius: 10px;
 }
 
-.apartamento-box h4 {
+.apartamento-box h2 {
   color: #ffffffee;
   margin: 5px 0;
+  font-size: 18px;
 }
 
 .apartamento-box .rating {
@@ -54,6 +55,7 @@
   border-radius: 5px;
   margin-right: 5px;
   padding: 5px;
+  color: white;
 }
 
 .apartamento-box .local {

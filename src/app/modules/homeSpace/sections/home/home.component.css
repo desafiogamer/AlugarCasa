@@ -51,7 +51,7 @@
   border-radius: 5px;
   width: 80%;
   padding: 10px;
-  background: var(--main-second-color);
+  background: #ff5202;
   color: white;
   border: none;
   margin-top: 10px;
@@ -114,7 +114,7 @@
   color: var(--main-second-color);
 }
 
-.title h3 {
+.title h2 {
   font-size: 25px;
   color: #ffffffb9;
 }
@@ -153,10 +153,9 @@
   align-items: center;
 }
 
-.lugar i {
+.lugar img {
   position: absolute;
   margin-left: 10px;
-  color: black;
 }
 
 .lugar input {
@@ -197,7 +196,7 @@
   width: 30%;
   height: 50px;
   font-size: 17px;
-  background: var(--main-second-color);
+  background: #ff5202;
   color: white;
   border-radius: 10px;
   border: none;

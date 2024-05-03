@@ -211,3 +211,75 @@
   background: var(--main-second-color);
   color: white;
 }
+
+@media(max-width: 1000px) {
+  .datas button {
+    font-size: 14px;
+  }
+}
+
+@media(max-width: 768px) {
+  .arrumarConfig{
+    display: block;
+  }
+
+  .desabilitar{
+    top: 120px;
+  }
+
+  .habilitar{
+      top: 120px;
+  }
+
+  .title {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .title h1 {
+      text-align: center;
+  }
+
+  .title h2 {
+      text-align: center;
+  }
+
+  .icones {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+
+  .icones a img {
+      margin-left: 0;
+  }
+
+  .datas {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .ida,
+  .lugar {
+      margin-bottom: 40px;
+  }
+}
+
+@media(max-width: 400px) {
+  .title h1 {
+      font-size: 35px;
+      margin-bottom: 20px;
+  }
+
+  .title h2 {
+      font-size: 23px;
+  }
+
+  .icones a {
+      width: 140px;
+  }
+
+  .icones a img {
+      width: 140px;
+  }
+}

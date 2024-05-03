@@ -76,3 +76,41 @@
 .apartamento-box .price strong {
   color: #ffffffea;
 }
+
+@media(max-width: 1100px) {
+  .apartamentos-content {
+      overflow-x: scroll;
+      height: auto;
+      padding-top: 20px;
+      padding-bottom: 20px;
+  }
+
+  .apartamento-box {
+      margin-right: 30px;
+  }
+}
+
+@media(max-width: 700px) {
+
+  .imgApartamento {
+      width: 200px;
+      height: auto;
+  }
+
+  .apartamento-box h4 {
+      margin: 10px 0;
+  }
+
+  .apartamento-box .rating {
+      font-size: 15px;
+      margin-bottom: 20px;
+  }
+
+  .apartamento-box .local {
+      font-size: 15px;
+  }
+
+  .apartamento-box .price {
+      font-size: 15px;
+  }
+}

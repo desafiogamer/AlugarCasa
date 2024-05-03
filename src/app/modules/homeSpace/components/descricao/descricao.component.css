@@ -40,3 +40,63 @@
 .descricao-one p {
   color: white;
 }
+
+@media(max-width: 900px) {
+  .descricao {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .title-des {
+      width: 40%;
+      margin-bottom: 20px;
+      text-align: center;
+  }
+
+  .descricao {
+      margin-top: 100px;
+  }
+
+  .descricao-content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .descricao-one {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      margin: 0 10px;
+  }
+}
+
+@media(max-width: 510px) {
+  .title-des{
+    width: 100%;
+  }
+  
+  .title-des h2 {
+    font-size: 30px;
+  }
+
+  .descricao-content {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .descricao-one {
+      margin-bottom: 20px;
+  }
+
+  .descricao-one h3 {
+      font-size: 15px;
+  }
+
+  .descricao-one p {
+      font-size: 15px;
+  }
+}

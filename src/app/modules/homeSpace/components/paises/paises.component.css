@@ -87,3 +87,18 @@ button:hover .index {
   opacity: 1;
   width: 120%;
 }
+
+@media(max-width: 1100px) {
+  .paises {
+      width: 100%;
+      height: auto;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      overflow-x: scroll;
+  }
+}
+
+.card {
+  margin-right: 30px;
+}

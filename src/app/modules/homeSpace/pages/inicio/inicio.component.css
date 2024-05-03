@@ -194,11 +194,38 @@ footer p {
   text-align: center;
 }
 
-footer i {
-  background: #ff4800;
-  color: white;
-  border-radius: 10px;
-  padding: 5px;
-  margin-left: 10px;
-  transition: .3s;
+@media(max-width: 1000px) {
+  nav {
+    display: none;
+  }
+
+  .login {
+      display: none;
+  }
+
+  #btn-menu {
+      display: block;
+  }
+}
+
+@media(max-width: 700px) {
+  footer {
+    padding: 20px 20px;
+  }
+
+  footer p {
+      font-size: 15px;
+      text-align: left;
+  }
+}
+
+@media(max-width: 510px) {
+  footer {
+    padding: 20px 20px;
+    flex-direction: column;
+  }
+
+  footer p {
+      margin-bottom: 15px;
+  }
 }

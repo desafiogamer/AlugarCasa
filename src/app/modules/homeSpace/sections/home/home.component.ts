@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit{
     if(config){
       config.addEventListener('click', AbrirConfig)
     }
+    
     function AbrirConfig(){
       if(config && openConfig){
         openConfig.classList.toggle('ativo')

@@ -1,0 +1,9 @@
+<div class="sobre">
+  <h2>Como funciona?</h2>
+  @for (item of arrayDetails; track item) {
+    <details>
+      <summary>{{item.title}}</summary>
+      <p>{{item.descricao}}</p>
+    </details>
+  }
+</div>

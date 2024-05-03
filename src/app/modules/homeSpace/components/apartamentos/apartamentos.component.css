@@ -1,0 +1,77 @@
+.apartamentos {
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.apartamentos h2 {
+  color: white;
+}
+
+.apartamentos h3 {
+  margin-top: 10px;
+  color: #ffffff6e;
+}
+
+.apartamentos-content {
+  width: 100%;
+  height: 400px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.apartamento-box {
+  margin: 0 auto;
+  background: #000000de;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: .3s;
+}
+
+.apartamento-box:hover {
+  transform: translateY(-15px);
+  box-shadow: 10px 20px 20px black
+}
+
+.apartamento-box img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.apartamento-box h4 {
+  color: #ffffffee;
+  margin: 5px 0;
+}
+
+.apartamento-box .rating {
+  color: #ffffffaf;
+  margin: 15px 0;
+}
+
+.apartamento-box .rating span {
+  background: #0051ff;
+  border-radius: 5px;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.apartamento-box .local {
+  color: #ffffffaf;
+  margin: 5px 0;
+}
+
+.apartamento-box .local i {
+  margin-right: 5px;
+}
+
+.apartamento-box .price {
+  text-align: end;
+  color: #ffffff6e;
+  margin-top: 10px;
+}
+
+.apartamento-box .price strong {
+  color: #ffffffea;
+}

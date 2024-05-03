@@ -1,0 +1,43 @@
+.descricao {
+  width: 100%;
+  display: flex;
+  margin-top: 200px;
+  border-top: 1px solid #ffffff1e;
+  padding: 20px 10px;
+  border-bottom: 1px solid #ffffff1e;
+  background: #000000d2;
+  border-radius: 10px;
+}
+
+.title-des {
+  width: 500px;
+}
+
+.title-des h2 {
+  font-size: 40px;
+  color: white;
+}
+
+.descricao-content {
+  width: 100%;
+  display: flex;
+}
+
+.descricao-one {
+  width: 18%;
+  margin: 0 auto;
+}
+
+.descricao-one i {
+  font-size: 25px;
+  color: #ff8d60;
+}
+
+.descricao-one h3 {
+  color: #ff8d60;
+  margin: 10px 0;
+}
+
+.descricao-one p {
+  color: white;
+}

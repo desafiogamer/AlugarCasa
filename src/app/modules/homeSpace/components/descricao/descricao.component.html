@@ -1,0 +1,14 @@
+<div class="descricao">
+  <div class="title-des">
+    <h2>O processo de reserva é simples</h2>
+  </div>
+  <div class="descricao-content">
+    @for (item of descricaoArray; track item) {
+      <div class="descricao-one">
+        <img [src]="item.src" [alt]="item.alt">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.descricao }}</p>
+      </div>
+    }
+  </div>
+</div>

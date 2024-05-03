@@ -1,0 +1,9 @@
+<div class="paises">
+  @for (item of Paisesarray; track item) {
+    <div class="card">
+      <img [src]="item.src" [alt]="item.alt" width="200px" height="200px">
+      <h3>{{item.title}}</h3>
+      <button><span class="index">Conferir</span></button>
+    </div>
+  }
+</div>

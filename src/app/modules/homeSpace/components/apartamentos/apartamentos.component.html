@@ -1,0 +1,48 @@
+@for (item of ApartamentsArray; track item) {
+  <div class="apartamentos">
+    <h2>Casas/apartamentos que todos amam</h2>
+    <div class="apartamentos-content">
+      @for (apartamento of item.arrayOne; track apartamento) {
+        <div class="apartamento-box">
+          <img [src]="apartamento.src" [alt]="apartamento.alt">
+          <h4>{{apartamento.title}}</h4>
+          <p class="rating"><span>{{apartamento.star}}</span> {{apartamento.nota}}/p>
+          <p class="local"><i class="bi bi-geo-alt"></i> {{apartamento.local}}</p>
+          <p class="price">A partir de <strong>R$ {{apartamento.price}}</strong></p>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="apartamentos">
+    <h2>Estadias únicas</h2>
+		<h3>Casas e apartamentos que valem a pena</h3>
+    <div class="apartamentos-content">
+      @for (apartamento of item.arrayTwo; track apartamento) {
+        <div class="apartamento-box">
+          <img [src]="apartamento.src" [alt]="apartamento.alt">
+          <h4>{{apartamento.title}}</h4>
+          <p class="rating"><span>{{apartamento.star}}</span> {{apartamento.nota}}/p>
+          <p class="local"><i class="bi bi-geo-alt"></i> {{apartamento.local}}</p>
+          <p class="price">A partir de <strong>R$ {{apartamento.price}}</strong></p>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="apartamentos">
+    <h2>Lugares que acomodam a família toda</h2>
+		<h3>Cozinha, sala e camas para todo mundo</h3>
+    <div class="apartamentos-content">
+      @for (apartamento of item.arrayThree; track apartamento) {
+        <div class="apartamento-box">
+          <img [src]="apartamento.src" [alt]="apartamento.alt">
+          <h4>{{apartamento.title}}</h4>
+          <p class="rating"><span>{{apartamento.star}}</span> {{apartamento.nota}}/p>
+          <p class="local"><i class="bi bi-geo-alt"></i> {{apartamento.local}}</p>
+          <p class="price">A partir de <strong>R$ {{apartamento.price}}</strong></p>
+        </div>
+      }
+    </div>
+  </div>
+}

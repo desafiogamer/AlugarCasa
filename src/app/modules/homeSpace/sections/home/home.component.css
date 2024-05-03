@@ -1,0 +1,212 @@
+.arrumarConfig{
+  position: absolute;
+  display: none;
+  width: 50px;
+  right: 0;
+  top: 80px;
+  background: var(--main-second-color);
+  z-index: 30;
+}
+
+.arrumarConfig img{
+  width: 40px;
+  animation: rodar 4s linear infinite;
+}
+
+@keyframes rodar{
+  0%{
+      transform: rotate(0);
+  }
+
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
+#services h1 {
+  font-size: 34px;
+  text-align: center;
+  color: white;
+}
+
+.desabilitar{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 90px;
+  background: black;
+  padding: 20px;
+  border-radius: 10px;
+  animation: aparecer .3s linear;
+}
+
+.desabilitar p{
+  color: var(--main-second-color);
+}
+
+.desabilitar button{
+  border-radius: 5px;
+  width: 80%;
+  padding: 10px;
+  background: var(--main-second-color);
+  color: white;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.desabilitar button:hover{
+  background: #777777;
+}
+
+.habilitar {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 90px;
+  background: black;
+  padding: 20px;
+  border-radius: 10px;
+  animation: aparecer .3s linear;
+}
+
+.habilitar p {
+  color: var(--main-second-color);
+}
+
+.habilitar button {
+  width: 80%;
+  border-radius: 5px;
+  padding: 10px;
+  background: #777777;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.habilitar button:hover {
+  background: var(--main-second-color);
+}
+
+
+.title {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+}
+
+.title h1 {
+  font-size: 45px;
+  color: #ffffffee;
+}
+
+.title h1 span {
+  color: var(--main-second-color);
+}
+
+.title h3 {
+  font-size: 25px;
+  color: #ffffffb9;
+}
+
+.icones {
+  display: flex;
+  align-items: center;
+}
+
+.icones a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.icones a img {
+  transition: .3s;
+  cursor: pointer;
+}
+
+.icones a img:hover {
+  transform: scale(1.1);
+}
+
+.datas {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.lugar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.lugar i {
+  position: absolute;
+  margin-left: 10px;
+  color: black;
+}
+
+.lugar input {
+  height: 50px;
+  width: 98%;
+  padding: 5px 35px;
+  border-radius: 8px;
+  border: none;
+}
+
+.lugar input::placeholder {
+  font-size: 17px;
+}
+
+.ida input {
+  height: 50px;
+  width: 98%;
+  padding: 5px 25px;
+  border-radius: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.ida,
+.lugar {
+  width: 100%;
+}
+
+.ida {
+  margin-top: -20px;
+}
+
+.ida span {
+  color: #ffffffd2;
+}
+
+.datas button {
+  width: 30%;
+  height: 50px;
+  font-size: 17px;
+  background: var(--main-second-color);
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.datas button:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 10px 10px #3a1000;
+  background: var(--main-second-color);
+}

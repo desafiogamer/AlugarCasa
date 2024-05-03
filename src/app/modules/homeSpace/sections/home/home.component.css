@@ -51,16 +51,16 @@
   border-radius: 5px;
   width: 80%;
   padding: 10px;
-  background: #ff5202;
+  background: transparent;
+  border: 2px solid var(--main-second-color);
   color: white;
-  border: none;
   margin-top: 10px;
   cursor: pointer;
   transition: .3s;
 }
 
 .desabilitar button:hover{
-  background: #777777;
+  background: var(--main-second-color);
 }
 
 .habilitar {
@@ -188,7 +188,7 @@
   margin-top: -20px;
 }
 
-.ida span {
+.ida label {
   color: #ffffffd2;
 }
 
@@ -196,16 +196,18 @@
   width: 30%;
   height: 50px;
   font-size: 17px;
-  background: #ff5202;
-  color: white;
+  background: transparent;
+  color: var(--main-second-color);
   border-radius: 10px;
   border: none;
   cursor: pointer;
   transition: .3s;
+  border: 2px solid var(--main-second-color);
 }
 
 .datas button:hover {
   transform: translateY(-5px);
   box-shadow: 5px 10px 10px #3a1000;
   background: var(--main-second-color);
+  color: white;
 }

@@ -28,9 +28,8 @@
   margin: 0 auto;
 }
 
-.descricao-one i {
-  font-size: 25px;
-  color: #ff8d60;
+.descricao-one img {
+  width: 40px;
 }
 
 .descricao-one h3 {

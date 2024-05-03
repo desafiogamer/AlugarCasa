@@ -4,10 +4,10 @@
     <div class="apartamentos-content">
       @for (apartamento of item.arrayOne; track apartamento) {
         <div class="apartamento-box">
-          <img [src]="apartamento.src" [alt]="apartamento.alt">
+          <img [src]="apartamento.src" [alt]="apartamento.alt" width="250px" height="250px">
           <h4>{{apartamento.title}}</h4>
           <p class="rating"><span>{{apartamento.star}}</span> {{apartamento.nota}}/p>
-          <p class="local"><i class="bi bi-geo-alt"></i> {{apartamento.local}}</p>
+          <p class="local"><img src="assets/icons/mapa.webp" alt="Local" width="18px" height="18px"> {{apartamento.local}}</p>
           <p class="price">A partir de <strong>R$ {{apartamento.price}}</strong></p>
         </div>
       }
@@ -20,10 +20,10 @@
     <div class="apartamentos-content">
       @for (apartamento of item.arrayTwo; track apartamento) {
         <div class="apartamento-box">
-          <img [src]="apartamento.src" [alt]="apartamento.alt">
+          <img [src]="apartamento.src" [alt]="apartamento.alt" width="250px" height="250px">
           <h4>{{apartamento.title}}</h4>
           <p class="rating"><span>{{apartamento.star}}</span> {{apartamento.nota}}/p>
-          <p class="local"><i class="bi bi-geo-alt"></i> {{apartamento.local}}</p>
+          <p class="local"><img src="assets/icons/mapa.webp" alt="Local" width="18px" height="18px">{{apartamento.local}}</p>
           <p class="price">A partir de <strong>R$ {{apartamento.price}}</strong></p>
         </div>
       }
@@ -36,10 +36,10 @@
     <div class="apartamentos-content">
       @for (apartamento of item.arrayThree; track apartamento) {
         <div class="apartamento-box">
-          <img [src]="apartamento.src" [alt]="apartamento.alt">
+          <img [src]="apartamento.src" [alt]="apartamento.alt" width="250px" height="250px">
           <h4>{{apartamento.title}}</h4>
           <p class="rating"><span>{{apartamento.star}}</span> {{apartamento.nota}}/p>
-          <p class="local"><i class="bi bi-geo-alt"></i> {{apartamento.local}}</p>
+          <p class="local"><img src="assets/icons/mapa.webp" alt="Local" width="18px" height="18px"> {{apartamento.local}}</p>
           <p class="price">A partir de <strong>R$ {{apartamento.price}}</strong></p>
         </div>
       }

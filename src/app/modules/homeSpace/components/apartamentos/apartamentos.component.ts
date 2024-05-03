@@ -12,7 +12,7 @@ export class ApartamentosComponent {
     {
       arrayOne:[
         {
-          src: 'assets/img/apartamentos/',
+          src: 'assets/apartamentos/comfort.webp',
           alt: 'apartamento1',
           title:'Comfort Flat Pinheiros em Hotel',
           star: '8,2',
@@ -21,7 +21,7 @@ export class ApartamentosComponent {
           price: '552'
         },
         {
-          src: 'assets/img/apartamentos/',
+          src: 'assets/apartamentos/charlie.webp',
           alt: 'apartamento1',
           title:'Charlie Jockey Pinheiros',
           star: '8,8',
@@ -30,7 +30,7 @@ export class ApartamentosComponent {
           price: '419'
         },
         {
-          src: 'assets/img/apartamentos/',
+          src: 'assets/apartamentos/vem.webp',
           alt: 'apartamento1',
           title:'Vem pro Copan',
           star: '8,5',
@@ -39,7 +39,7 @@ export class ApartamentosComponent {
           price: '247'
         },
         {
-          src: 'assets/img/apartamentos/',
+          src: 'assets/apartamentos/rosemari.webp',
           alt: 'apartamento1',
           title:'Rosemari Apartments Sao Joao',
           star: '9,3',
@@ -50,7 +50,7 @@ export class ApartamentosComponent {
       ],
       arrayTwo:[
         {
-          src: 'assets/img/apartamentos/',
+          src: 'assets/apartamentos/snowhotel.webp',
           alt: 'apartamento1',
           title:'Snowhotel Kirkenes',
           star: '9,0',
@@ -59,7 +59,7 @@ export class ApartamentosComponent {
           price: '1.889'
         },
         {
-          src: 'assets/img/apartamentos/',
+          src: 'assets/apartamentos/ranua.webp',
           alt: 'apartamento1',
           title:'Ranua Resort Arctic Igloos',
           star: '8,7',
@@ -68,7 +68,7 @@ export class ApartamentosComponent {
           price: '1.364'
         },
         {
-          src: 'assets/img/apartamentos/',
+          src: 'assets/apartamentos/icehotel.webp',
           alt: 'apartamento1',
           title:'Icehotel',
           star: '8,6',
@@ -77,7 +77,7 @@ export class ApartamentosComponent {
           price: '1.032'
         },
         {
-          src: 'assets/img/apartamentos/',
+          src: 'assets/apartamentos/kakaslau.webp',
           alt: 'apartamento1',
           title:'Kakslauttanen Arctic Resort - Igloos and Chalets',
           star: '7,8',
@@ -88,7 +88,7 @@ export class ApartamentosComponent {
       ],
       arrayThree:[
         {
-          src: 'assets/img/apartamentos/',
+          src: 'assets/apartamentos/casa.webp',
           alt: 'apartamento1',
           title:'Casa Anhembi/Center Norte',
           star: '9,4',
@@ -97,7 +97,7 @@ export class ApartamentosComponent {
           price: '399'
         },
         {
-          src: 'assets/img/apartamentos/',
+          src: 'assets/apartamentos/xbase.webp',
           alt: 'apartamento1',
           title:'XBase Studio Parque Augusta-Higienópolis Mackenzie',
           star: '9,1',
@@ -106,7 +106,7 @@ export class ApartamentosComponent {
           price: '210'
         },
         {
-          src: 'assets/img/apartamentos/',
+          src: 'assets/apartamentos/ape.webp',
           alt: 'apartamento1',
           title:'Apê Brooklin -Berrini',
           star: '8,6',
@@ -115,7 +115,7 @@ export class ApartamentosComponent {
           price: '195'
         },
         {
-          src: 'assets/img/apartamentos/',
+          src: 'assets/apartamentos/mercure.webp',
           alt: 'apartamento1',
           title:'Mercure Sao Paulo Moema Times Square - Flat DIAMOND',
           star: '9,8',

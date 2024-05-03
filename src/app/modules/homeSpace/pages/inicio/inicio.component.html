@@ -9,12 +9,16 @@
       <a href="#">Entrar</a>
       <a href="#">Cadastre-se</a>
     </div>
-    <button id="btn-menu">
-      <span class="linha"></span>
-      <span class="linha"></span>
-      <span class="linha"></span>
+    <button id="btn-menu" #btnMenu>
+      <img src="assets/icons/menu-aberto.webp" alt="MenuMobile" width="30px" height="30px">
     </button>
   </header>
+  <div class="menuMobile" #menuMobile>
+    <a href="#inicio">Inicio <i class="bi bi-house-door"></i></a>
+    <a href="#services">Serviços <i class="bi bi-hammer"></i></a>
+    <a href="#">Entrar <i class="bi bi-box-arrow-in-right"></i></a>
+    <a href="#">Cadastre-se <i class="bi bi-person-plus"></i></a>
+  </div>
 
   <section id="inicio">
     <app-home/>

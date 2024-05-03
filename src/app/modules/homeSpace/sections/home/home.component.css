@@ -223,6 +223,18 @@
     display: block;
   }
 
+    .config{
+      display: none;
+  }
+
+  .config.ativo{
+      display: block;
+  }
+
+  .arrumarConfig{
+      display: block;
+  }
+
   .desabilitar{
     top: 120px;
   }

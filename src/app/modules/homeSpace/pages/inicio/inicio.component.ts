@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { HomeComponent } from '../../sections/home/home.component';
 import { ServicesComponent } from '../../sections/services/services.component';
 import { AboutComponent } from '../../sections/about/about.component';
@@ -10,6 +10,20 @@ import { AboutComponent } from '../../sections/about/about.component';
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })
-export class InicioComponent {
+export class InicioComponent implements OnInit{
+  constructor(){}
+  ngOnInit(): void {
+    const btnAnimar: HTMLElement | null = document.getElementById('btn-menu');
+    const menuMobile = document.querySelector('.menuMobile');
 
+    if (btnAnimar) {
+      btnAnimar.addEventListener('click', animarMenu);
+    }
+
+    function animarMenu() {
+      if (btnAnimar && menuMobile) {
+        menuMobile.classList.toggle('ativo');
+      }
+    }
+  }
 }

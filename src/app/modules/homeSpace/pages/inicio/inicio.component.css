@@ -32,27 +32,9 @@ header img {
   cursor: pointer;
 }
 
-.linha {
-  width: 25px;
-  height: 2px;
-  background: var(--main-second-color);
-  display: block;
-  margin: 4px auto;
-  position: relative;
-  transform-origin: center;
-  transition: .3s;
-}
-
-button.ativar .linha:nth-child(1) {
-  transform: translateY(6px) rotate(-55deg);
-}
-
-button.ativar .linha:nth-child(2) {
-  width: 0;
-}
-
-button.ativar .linha:nth-child(3) {
-  transform: translateY(-6px) rotate(55deg);
+#btn-menu img{
+  width: 30px;
+  height: 30px;
 }
 
 nav {

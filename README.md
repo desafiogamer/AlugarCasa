@@ -4,3 +4,5 @@
 Fiz essa landing page focada no desempenho, boas praticas, acessibilidade e SEO, o projeto está bastante otimizado e organizado, porém contém animações de alto nivél.
 
 Aqui esta o deploy para voce conferir: <a href="https://loja-animada-game.vercel.app/](https://home-space-brown.vercel.app/" target="_blank">Link do projeto</a>
+
+![projetoCasa-min](https://github.com/desafiogamer/AlugarCasa/assets/145628900/a8cf1dbe-b2be-4a04-affe-dc288fded9b6)

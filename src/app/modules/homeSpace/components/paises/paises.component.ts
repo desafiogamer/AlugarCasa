@@ -1,5 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+
+//interface
+import { paisesInterface } from '../../interface/paises.interface';
 
 @Component({
   selector: 'app-paises',
@@ -9,7 +12,7 @@ import { Component } from '@angular/core';
   styleUrl: './paises.component.css'
 })
 export class PaisesComponent {
-  public Paisesarray = [
+  public Paisesarray = signal<paisesInterface[]>([
     {
       src: 'assets/img/90.webp',
       alt: 'pais1',
@@ -35,5 +38,5 @@ export class PaisesComponent {
       alt: 'pais5',
       title: 'Suíça'
     },
-  ]
+  ])
 }

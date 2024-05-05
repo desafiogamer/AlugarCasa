@@ -1,13 +1,15 @@
 import { Component, OnInit} from '@angular/core';
+
+//components
 import { HomeComponent } from '../../sections/home/home.component';
 import { ServicesComponent } from '../../sections/services/services.component';
 import { AboutComponent } from '../../sections/about/about.component';
-import { Modelo3DComponent } from '../../components/modelo-3-d/modelo-3-d.component';
+import { MenuComponent } from '../../components/menu/menu.component';
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [HomeComponent,ServicesComponent,AboutComponent, Modelo3DComponent],
+  imports: [HomeComponent,ServicesComponent,AboutComponent, MenuComponent],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })

@@ -1,5 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+
+//interfaces
+import { aboutInterface } from '../../interface/about.interface';
 
 @Component({
   selector: 'app-about',
@@ -9,7 +12,7 @@ import { Component } from '@angular/core';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-  public arrayDetails = [
+  public arrayDetails = signal<aboutInterface[]>([
     {
       title: 'Retirando sua chave',
       descricao: 'Você poderá se comunicar diretamente com o anfitrião para saber como retirar suas chaves. Não importa se você vai encontrá-lo pessoalmente ou vai usar uma caixa, é fácil entrar na acomodação e aproveitar suas férias!'
@@ -22,5 +25,5 @@ export class AboutComponent {
       title: 'Fazendo check-in',
       descricao: 'Talvez você sempre tenha ficado em hotéis e não tem certeza como fazer o check-in em um apartamento ou casa de temporada. Não se preocupe, outros hóspedes também se sentem assim! É por isso que os anfitriões te dão todas as informações para você se hospedar tranquilamente.'
     },
-  ]
+  ])
 }

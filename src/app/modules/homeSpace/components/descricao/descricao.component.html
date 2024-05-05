@@ -3,7 +3,7 @@
     <h2>O processo de reserva é simples</h2>
   </div>
   <div class="descricao-content">
-    @for (item of descricaoArray; track item) {
+    @for (item of descricaoArray(); track item) {
       <div class="descricao-one">
         <img [src]="item.src" [alt]="item.alt" width="40px" height="40px">
         <h3>{{ item.title }}</h3>

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { DescricaoInterface } from '../../interface/descricao.interface';
 
 @Component({
   selector: 'app-descricao',
@@ -9,7 +10,7 @@ import { Component } from '@angular/core';
   styleUrl: './descricao.component.css'
 })
 export class DescricaoComponent {
-  public descricaoArray = [
+  public descricaoArray = signal<DescricaoInterface[]>([
     {
       src:'assets/icons/cadeado (1).webp',
       alt: 'descricao1',
@@ -28,5 +29,5 @@ export class DescricaoComponent {
       title: 'Cancelamento flexível',
       descricao: 'Muitas acomodações oferecem cancelamento flexível'
     },
-  ]
+  ])
 }

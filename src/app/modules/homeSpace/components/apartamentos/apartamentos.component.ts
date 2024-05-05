@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+
+//interfaces
+import { ApartamentosInterface } from '../../interface/apartamentos.interface';
 
 @Component({
   selector: 'app-apartamentos',
@@ -8,9 +11,9 @@ import { Component } from '@angular/core';
   styleUrl: './apartamentos.component.css'
 })
 export class ApartamentosComponent {
-  public ApartamentsArray = [
+  public ApartamentsArray = signal([
     {
-      arrayOne:[
+      arrayOne:<ApartamentosInterface[]>[
         {
           src: 'assets/apartamentos/comfort.webp',
           alt: 'apartamento1',
@@ -48,7 +51,7 @@ export class ApartamentosComponent {
           price: '509'
         },
       ],
-      arrayTwo:[
+      arrayTwo:<ApartamentosInterface[]>[
         {
           src: 'assets/apartamentos/snowhotel.webp',
           alt: 'apartamento1',
@@ -86,7 +89,7 @@ export class ApartamentosComponent {
           price: '53.475'
         },
       ],
-      arrayThree:[
+      arrayThree:<ApartamentosInterface[]>[
         {
           src: 'assets/apartamentos/casa.webp',
           alt: 'apartamento1',
@@ -125,5 +128,5 @@ export class ApartamentosComponent {
         },
       ]
     }
-  ]
+  ])
 }

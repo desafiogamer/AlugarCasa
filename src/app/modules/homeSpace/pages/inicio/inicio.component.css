@@ -1,4 +1,5 @@
 #inicio {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
@@ -8,8 +9,7 @@
   overflow: hidden;
 }
 
-#inicio::before{
-  content: "";
+.black{
   position: absolute;
   width: 100%;
   height: 100%;

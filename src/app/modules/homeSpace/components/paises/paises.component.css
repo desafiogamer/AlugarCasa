@@ -47,8 +47,8 @@
   opacity: .8;
   font-weight: 200;
   padding: 10px 20px;
-  background: transparent;
-  color: var(--main-second-color);
+  background: #ff480017;
+  color: white;
   transition: all .4s ease;
   outline: none;
   margin: 20px;
@@ -57,7 +57,6 @@
   overflow: hidden;
   position: relative;
   transition: all .4s ease;
-  border-radius: 10px;
 }
 
 .card button::before {

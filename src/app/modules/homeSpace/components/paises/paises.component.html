@@ -1,9 +1,20 @@
 <div class="paises">
-  @for (item of Paisesarray(); track item) {
-    <div class="card">
-      <img [src]="item.src" [alt]="item.alt" width="200px" height="200px">
-      <h2>{{item.title}}</h2>
-      <button><span class="index">Conferir</span></button>
-    </div>
+  @for (item of Paisesarray(); track item.title; let i = $index) {
+    <article class="card spot ring tilt" appSpotlight tilt data-reveal [revealDelay]="i * 90">
+      <div class="card-media">
+        <img [src]="item.src" [alt]="item.alt" width="400" height="500" loading="lazy">
+        <span class="tag">Top destino</span>
+      </div>
+      <div class="card-body lift">
+        <h3>{{ item.title }}</h3>
+        <button type="button" class="shine">
+          <span class="index">Conferir</span>
+          <svg class="seta" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h13M12 5l7 7-7 7" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </article>
   }
 </div>

@@ -1,48 +1,44 @@
-@for (item of ApartamentsArray(); track item) {
-  <div class="apartamentos">
-    <h2>Casas/apartamentos que todos amam</h2>
-    <div class="apartamentos-content">
-      @for (apartamento of item.arrayOne; track apartamento) {
-        <div class="apartamento-box">
-          <img [src]="apartamento.src" [alt]="apartamento.alt" width="250px" height="250px" class="imgApartamento">
-          <h2>{{apartamento.title}}</h2>
-          <p class="rating"><span>{{apartamento.star}}</span> {{apartamento.nota}}</p>
-          <p class="local"><img src="assets/icons/mapa.webp" alt="Local" width="18px" height="18px"> {{apartamento.local}}</p>
-          <p class="price">A partir de <strong>R$ {{apartamento.price}}</strong></p>
-        </div>
-      }
-    </div>
-  </div>
+@for (secao of ApartamentsArray(); track secao.title) {
+  <section class="apartamentos">
+    <header class="apartamentos-head" data-reveal>
+      <div>
+        <h2>{{ secao.title }}</h2>
+        @if (secao.subtitle) {
+          <h3>{{ secao.subtitle }}</h3>
+        }
+      </div>
+      <a href="#" class="ver-todos shine">Ver todos</a>
+    </header>
 
-  <div class="apartamentos">
-    <h2>Estadias únicas</h2>
-		<h3>Casas e apartamentos que valem a pena</h3>
-    <div class="apartamentos-content">
-      @for (apartamento of item.arrayTwo; track apartamento) {
-        <div class="apartamento-box">
-          <img [src]="apartamento.src" [alt]="apartamento.alt" width="250px" height="250px" class="imgApartamento">
-          <h2>{{apartamento.title}}</h2>
-          <p class="rating"><span>{{apartamento.star}}</span> {{apartamento.nota}}</p>
-          <p class="local"><img src="assets/icons/mapa.webp" alt="Local" width="18px" height="18px">{{apartamento.local}}</p>
-          <p class="price">A partir de <strong>R$ {{apartamento.price}}</strong></p>
-        </div>
-      }
-    </div>
-  </div>
+    <div class="apartamentos-content scroll-row">
+      @for (apartamento of secao.itens; track apartamento.title; let i = $index) {
+        <article class="apartamento-box spot ring tilt" appSpotlight tilt [tiltMax]="5" data-reveal [revealDelay]="i * 80">
+          <div class="box-media">
+            <img
+              [src]="apartamento.src"
+              [alt]="apartamento.alt"
+              width="400" height="300"
+              class="imgApartamento"
+              loading="lazy">
+            <span class="rating"><strong>{{ apartamento.star }}</strong> {{ apartamento.nota }}</span>
+            <span class="ver-mais">Ver detalhes</span>
+          </div>
 
-  <div class="apartamentos">
-    <h2>Lugares que acomodam a família toda</h2>
-		<h3>Cozinha, sala e camas para todo mundo</h3>
-    <div class="apartamentos-content">
-      @for (apartamento of item.arrayThree; track apartamento) {
-        <div class="apartamento-box">
-          <img [src]="apartamento.src" [alt]="apartamento.alt" width="250px" height="250px" class="imgApartamento">
-          <h2>{{apartamento.title}}</h2>
-          <p class="rating"><span>{{apartamento.star}}</span> {{apartamento.nota}}</p>
-          <p class="local"><img src="assets/icons/mapa.webp" alt="Local" width="18px" height="18px"> {{apartamento.local}}</p>
-          <p class="price">A partir de <strong>R$ {{apartamento.price}}</strong></p>
-        </div>
+          <div class="box-body lift">
+            <h4>{{ apartamento.title }}</h4>
+
+            <p class="local">
+              <img src="assets/icons/mapa.webp" alt="" aria-hidden="true" width="16" height="16">
+              {{ apartamento.local }}
+            </p>
+
+            <p class="price">
+              <span>A partir de</span>
+              <strong>R$ {{ apartamento.price }}</strong>
+            </p>
+          </div>
+        </article>
       }
     </div>
-  </div>
+  </section>
 }

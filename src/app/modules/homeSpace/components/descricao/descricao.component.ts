@@ -2,10 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { DescricaoInterface } from '../../interface/descricao.interface';
 
+//directives
+import { RevealDirective } from '../../../../shared/directives/reveal.directive';
+import { SpotlightDirective } from '../../../../shared/directives/spotlight.directive';
+
 @Component({
   selector: 'app-descricao',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RevealDirective, SpotlightDirective],
   templateUrl: './descricao.component.html',
   styleUrl: './descricao.component.css'
 })

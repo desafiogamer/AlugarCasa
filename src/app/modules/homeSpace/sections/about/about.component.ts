@@ -4,10 +4,13 @@ import { Component, signal } from '@angular/core';
 //interfaces
 import { aboutInterface } from '../../interface/about.interface';
 
+//directives
+import { RevealDirective } from '../../../../shared/directives/reveal.directive';
+
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RevealDirective],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })

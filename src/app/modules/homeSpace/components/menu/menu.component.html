@@ -1,22 +1,60 @@
-<header class="header">
-  <a href="#"><img src="assets/icons/icon.webp" alt="icone"></a>
-  <nav>
-    <a href="#inicio" class="ativo"> Inicio</a>
-    <a href="#services">Serviços</a>
-    <a href="#about">Ajuda</a>
-  </nav>
-  <div class="login">
-    <a href="#">Entrar</a>
-    <a href="#">Cadastre-se</a>
+<header class="header" [class.rolou]="rolou()">
+  <div class="header-inner">
+    <a href="#inicio" class="marca" (click)="fecharMenu()">
+      <span class="marca-icone" aria-hidden="true">
+        <svg viewBox="0 0 40 40" role="img">
+          <defs>
+            <linearGradient id="marcaGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff4800"/>
+              <stop offset="1" stop-color="#ffb347"/>
+            </linearGradient>
+          </defs>
+          <rect width="40" height="40" rx="12" fill="url(#marcaGrad)"/>
+          <path
+            d="M10.5 20 20 11.5 29.5 20v8.3a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2z M16.8 30.3v-6.6h6.4v6.6"
+            fill="none" stroke="#fff" stroke-width="2.1"
+            stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="marca-nome">Alugar<strong>Casa</strong></span>
+    </a>
+
+    <nav class="nav">
+      @for (link of links; track link.id) {
+        <a [href]="link.href" [class.ativo]="secaoAtiva() === link.id">{{ link.label }}</a>
+      }
+    </nav>
+
+    <div class="login">
+      <a href="#" class="ghost">Entrar</a>
+      <a href="#" class="cta shine">Cadastre-se</a>
+    </div>
+
+    <button
+      id="btn-menu"
+      class="btn-menu"
+      type="button"
+      [class.ativo]="menuAberto()"
+      [attr.aria-expanded]="menuAberto()"
+      aria-controls="menu-mobile"
+      aria-label="Abrir menu"
+      (click)="alternarMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
-  <button id="btn-menu" #btnMenu>
-    <img src="assets/icons/menu-aberto.webp" alt="MenuMobile" width="30px" height="30px">
-  </button>
 </header>
-<div class="menuMobile" #menuMobile>
-  <a href="#inicio">Inicio</a>
-  <a href="#services">Serviços </a>
-  <a href="#about">Ajuda</a>
-  <a href="#">Entrar</a>
-  <a href="#">Cadastre-se </a>
+
+<div class="overlay" [class.ativo]="menuAberto()" (click)="fecharMenu()"></div>
+
+<div id="menu-mobile" class="menuMobile" [class.ativo]="menuAberto()">
+  <p class="menu-titulo">Navegação</p>
+  @for (link of links; track link.id) {
+    <a [href]="link.href" (click)="fecharMenu()">{{ link.label }}</a>
+  }
+  <div class="menu-acoes">
+    <a href="#" (click)="fecharMenu()">Entrar</a>
+    <a href="#" class="cta shine" (click)="fecharMenu()">Cadastre-se</a>
+  </div>
 </div>

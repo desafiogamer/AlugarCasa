@@ -1,9 +1,27 @@
-<div class="sobre">
-  <h2>Como funciona?</h2>
-  @for (item of arrayDetails(); track item) {
-    <details>
-      <summary>{{item.title}}</summary>
-      <p>{{item.descricao}}</p>
-    </details>
-  }
+<div class="sobre shell">
+  <div class="sobre-intro" data-reveal>
+    <span class="eyebrow">Ajuda</span>
+    <h2>Como funciona?</h2>
+    <p>As dúvidas mais comuns de quem está reservando pela primeira vez.</p>
+  </div>
+
+  <div class="sobre-lista">
+    @for (item of arrayDetails(); track item.title; let i = $index) {
+      <details data-reveal [revealDelay]="i * 90">
+        <summary>
+          <span>{{ item.title }}</span>
+          <i class="chevron" aria-hidden="true"></i>
+        </summary>
+        <p>{{ item.descricao }}</p>
+      </details>
+    }
+  </div>
+
+  <div class="sobre-cta" data-reveal [revealDelay]="120">
+    <div>
+      <h3>Pronto pra reservar sua próxima estadia?</h3>
+      <p>Crie sua conta e acompanhe preços dos destinos que você ama.</p>
+    </div>
+    <a href="#inicio" class="cta shine">Começar agora</a>
+  </div>
 </div>

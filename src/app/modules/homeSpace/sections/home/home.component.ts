@@ -1,27 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { RevealDirective } from '../../../../shared/directives/reveal.directive';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [RevealDirective],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit{
-  constructor(){}
-
-  ngOnInit(): void {
-    const config: HTMLElement | null  = document.querySelector('.arrumarConfig')
-    const openConfig = document.querySelector('.config')
-
-    if(config){
-      config.addEventListener('click', AbrirConfig)
-    }
-    
-    function AbrirConfig(){
-      if(config && openConfig){
-        openConfig.classList.toggle('ativo')
-      }
-    }
-  }
+export class HomeComponent {
+  public readonly numeros = signal([
+    { valor: '120+', label: 'países atendidos' },
+    { valor: '38 mil', label: 'acomodações ativas' },
+    { valor: '4,9', label: 'nota média dos hóspedes' }
+  ]);
 }

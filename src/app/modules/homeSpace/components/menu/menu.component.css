@@ -1,156 +1,304 @@
-header {
-    position: fixed;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
-    backdrop-filter: blur(20px);
-    padding: 5px 40px;
-    z-index: 999;
-    transition: .3s;
+/* ==========================================================================
+   Header flutuante em "pílula" de vidro
+   ========================================================================== */
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 999;
+  padding: 18px var(--gutter);
+  transition: padding .4s var(--ease);
 }
 
-header img {
-    width: 70px;
-    height: 70px;
+.header.rolou { padding: 10px var(--gutter); }
+
+.header-inner {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 66px;
+  padding: 0 10px 0 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, .1);
+  background: rgba(12, 13, 17, .55);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .06) inset, 0 12px 32px -18px rgba(0, 0, 0, .9);
+  transition: height .4s var(--ease), background .4s var(--ease),
+              border-color .4s var(--ease), box-shadow .4s var(--ease);
 }
 
-#btn-menu {
-    background-color: transparent;
-    display: none;
-    border-radius: 5px;
-    border: none;
-    width: 40px;
-    height: 30px;
-    cursor: pointer;
+.header.rolou .header-inner {
+  height: 60px;
+  border-color: rgba(255, 255, 255, .14);
+  background: rgba(10, 11, 14, .82);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .07) inset, 0 20px 44px -22px rgba(0, 0, 0, 1);
 }
 
-#btn-menu img {
-    width: 30px;
-    height: 30px;
+/* ---- marca --------------------------------------------------------------- */
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  margin-right: auto;
+  text-decoration: none;
+  transition: opacity .3s var(--ease);
 }
 
-nav {
-    display: flex;
-    align-items: center;
+/* o símbolo reage sozinho, sem apagar o texto */
+.marca:hover .marca-icone {
+  transform: rotate(-8deg) scale(1.08);
+  box-shadow: 0 10px 24px -6px rgba(255, 72, 0, .95);
 }
 
-nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: white;
-    font-size: 17px;
-    transition: .3s;
+.marca:hover .marca-nome { color: #fff; }
+
+.marca-icone {
+  display: block;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px -6px rgba(255, 72, 0, .75);
+  transition: transform .45s var(--ease), box-shadow .45s var(--ease);
 }
 
-nav a:hover {
-    color: var(--main-second-color)
+.marca-icone svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-nav a:first-child {
-    padding: 9px 15px;
-    border: 1px solid white;
-    border-radius: 10px;
+.marca-nome {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -.02em;
+  color: rgba(255, 255, 255, .78);
+  white-space: nowrap;
+  transition: color .35s var(--ease);
 }
 
-nav a:hover:first-child {
-    border: 1px solid var(--main-second-color);
+.marca-nome strong {
+  font-weight: 700;
+  color: #fff;
 }
 
-nav a.ativo {
-    transition: .3s;
-    color: var(--main-second-color);
-    transform: scale(1.1);
+/* ---- navegação ----------------------------------------------------------- */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
-nav a.ativo:first-child {
-    border: 1px solid var(--main-second-color);
+.nav a {
+  position: relative;
+  padding: 10px 16px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, .62);
+  transition: color .3s var(--ease);
 }
 
-nav a i {
-    margin-right: 5px;
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--brand-gradient);
+  transform: translateX(-50%);
+  transition: width .35s var(--ease);
+}
+
+.nav a:hover { color: #fff; }
+.nav a:hover::after { width: 14px; }
+
+.nav a.ativo { color: #fff; }
+.nav a.ativo::after { width: 20px; }
+
+/* ---- login --------------------------------------------------------------- */
+.login {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-left: 14px;
+  margin-left: 4px;
+  border-left: 1px solid rgba(255, 255, 255, .1);
 }
 
 .login a {
-    font-size: 17px;
-    margin-left: 20px;
-    color: white;
-    text-decoration: none;
-    transition: .3s;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: .3s var(--ease);
 }
 
-.login a:hover {
-    color: var(--main-second-color);
+.login .ghost {
+  padding: 10px 14px;
+  border-radius: var(--radius-pill);
+  color: rgba(255, 255, 255, .7);
 }
 
-.login a:last-child {
-    background: #161616;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    transition: .3s;
+.login .ghost:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, .08);
 }
 
-.login a:hover:last-child {
-    background: #1f1f1f;
+.login .cta {
+  padding: 12px 22px;
+  border-radius: var(--radius-pill);
+  color: #fff;
+  background: var(--brand-gradient);
+  box-shadow: 0 8px 22px -12px rgba(255, 72, 0, .9);
+}
+
+.login .cta:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.07);
+  box-shadow: 0 14px 30px -12px rgba(255, 72, 0, 1);
+}
+
+/* ---- botão hambúrguer ---------------------------------------------------- */
+.btn-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 46px;
+  height: 46px;
+  padding: 0 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, .12);
+  background: rgba(255, 255, 255, .05);
+  cursor: pointer;
+}
+
+.btn-menu span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  background: #fff;
+  transition: transform .35s var(--ease), opacity .2s linear;
+}
+
+.btn-menu.ativo span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.btn-menu.ativo span:nth-child(2) { opacity: 0; }
+.btn-menu.ativo span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---- menu mobile --------------------------------------------------------- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 990;
+  background: rgba(3, 4, 6, .62);
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s var(--ease), visibility .35s var(--ease);
+}
+
+.overlay.ativo {
+  opacity: 1;
+  visibility: visible;
 }
 
 .menuMobile {
-    width: 0;
-    display: flex;
-    position: fixed;
-    right: 0;
-    top: 80px;
-    background: black;
-    z-index: 999;
-    flex-direction: column;
-    text-align: end;
-    transition: .3s;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 995;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: min(330px, 86vw);
+  height: 100dvh;
+  padding: calc(var(--header-h) + 18px) 22px 30px;
+  background: rgba(10, 11, 14, .96);
+  border-left: 1px solid var(--border);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  transform: translateX(105%);
+  transition: transform .42s var(--ease);
 }
 
-.menuMobile a {
-    text-decoration: none;
-    color: white;
-    padding: 20px;
-    padding-right: 40px;
-    border-bottom: 1px solid #ffffff27;
+.menuMobile.ativo { transform: translateX(0); }
+
+.menu-titulo {
+  margin-bottom: 6px;
+  padding-left: 18px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
 }
 
-.menuMobile a:first-child {
-    border-top: 1px solid #ffffff27;
+.menuMobile > a {
+  padding: 15px 18px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-size: 16.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--surface);
+  border: 1px solid transparent;
+  transition: .3s var(--ease);
 }
 
-.menuMobile a:last-child {
-    border: none;
+.menuMobile > a:hover {
+  color: #fff;
+  border-color: var(--border-strong);
+  transform: translateX(-4px);
 }
 
-.menuMobile a:hover {
-    color: var(--main-second-color);
+.menu-acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
 }
 
-.menuMobile a i {
-    color: var(--main-second-color);
-    margin-left: 10px;
-    font-size: 20px;
+.menu-acoes a {
+  padding: 15px 18px;
+  border-radius: var(--radius);
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-muted);
+  border: 1px solid var(--border-strong);
+  transition: .3s var(--ease);
 }
 
-.menuMobile.ativo {
-    width: 100%;
+.menu-acoes a:hover { color: #fff; }
+
+.menu-acoes .cta {
+  color: #fff;
+  border-color: transparent;
+  background: var(--brand-gradient);
+  box-shadow: var(--shadow-brand);
 }
 
+@media (max-width: 1040px) {
+  .nav,
+  .login { display: none; }
 
-@media(max-width: 1000px) {
-    nav {
-        display: none;
-    }
+  .btn-menu { display: flex; }
 
-    .login {
-        display: none;
-    }
+  .header-inner { padding-right: 8px; }
+}
 
-    #btn-menu {
-        display: block;
-    }
+@media (max-width: 400px) {
+  .header { padding-inline: 16px; }
+  .marca-nome { font-size: 16px; }
 }

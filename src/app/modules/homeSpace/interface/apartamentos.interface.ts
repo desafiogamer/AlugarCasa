@@ -7,3 +7,9 @@ export interface ApartamentosInterface{
     local: string,
     price: string
 }
+
+export interface SecaoApartamentosInterface {
+    title: string,
+    subtitle?: string,
+    itens: ApartamentosInterface[]
+}

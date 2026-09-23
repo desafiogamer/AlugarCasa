@@ -1,11 +1,17 @@
-<div class="descricao">
+<div class="descricao" data-reveal>
   <div class="title-des">
+    <span class="eyebrow">Reserva em 3 passos</span>
     <h2>O processo de reserva é simples</h2>
+    <p>Tudo o que você precisa saber antes de confirmar a estadia — sem letras miúdas.</p>
   </div>
+
   <div class="descricao-content">
-    @for (item of descricaoArray(); track item) {
-      <div class="descricao-one">
-        <img [src]="item.src" [alt]="item.alt" width="40px" height="40px">
+    @for (item of descricaoArray(); track item.title; let i = $index) {
+      <div class="descricao-one spot ring" appSpotlight data-reveal [revealDelay]="i * 110">
+        <span class="passo">0{{ i + 1 }}</span>
+        <div class="icone">
+          <img [src]="item.src" [alt]="item.alt" width="28" height="28" loading="lazy">
+        </div>
         <h3>{{ item.title }}</h3>
         <p>{{ item.descricao }}</p>
       </div>
